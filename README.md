@@ -5,3 +5,6 @@ These are some useful git aliases that I use in my every day work
  - Syntax:
  ``` git createbranch newBranchName [branchToBaseOff] ```
   
+*backmerge* or *bm* merges the latest from a specified branch to your current branch
+- Syntax:
+``` git bm [branchToMergeFrom] ```

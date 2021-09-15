@@ -1,0 +1,5 @@
+[alias]	
+	createBranch = "!f() { ParentBr=${2-master}; ParentBr=origin/$ParentBr; echo -e \"\n\\033[32mCreating ${1} based off of ${ParentBr}...\\033[0m\n\"; git pull; git checkout -b \"$1\" --no-track $ParentBr; git push --set-upstream origin \"$1\"; }; f"
+	cb = "!f() { ParentBr=${2-master}; ParentBr=origin/$ParentBr; echo -e \"\n\\033[32mCreating ${1} based off of ${ParentBr}...\\033[0m\n\"; git pull; git checkout -b \"$1\" --no-track $ParentBr; git push --set-upstream origin \"$1\"; }; f"
+	backmerge = "!f() { ParentBr=${1-master}; ParentBr=origin/$ParentBr; CurrentBr=$(git rev-parse --abbrev-ref HEAD); echo -e \"\n\\033[32mBack merging from ${ParentBr} to ${CurrentBr}...\\033[0m\n\"; git pull; git merge \"$ParentBr\"; }; f"
+	bm = "!f() { ParentBr=${1-master}; ParentBr=origin/$ParentBr; CurrentBr=$(git rev-parse --abbrev-ref HEAD); echo -e \"\n\\033[32mBack merging from ${ParentBr} to ${CurrentBr}...\\033[0m\n\"; git pull; git merge \"$ParentBr\"; }; f"
